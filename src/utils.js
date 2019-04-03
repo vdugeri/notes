@@ -8,7 +8,20 @@ export let showSuccess = message => {
   let messageBox = toast.children[0];
 
   messageBox.innerText = message;
-  toast.addClass = 'toast--success';
+  toast.setAttribute('class', 'toast toast--success');
+  toast.style.display = 'block';
+
+  setTimeout(() => {
+    toast.style.display = 'none';
+  }, 5000);
+}
+
+export let showError = message => {
+  let toast = document.getElementById('toast');
+  let messageBox = toast.children[0];
+
+  messageBox.innerText = message;
+  toast.setAttribute('class', 'toast toast--error');
   toast.style.display = 'block';
 
   setTimeout(() => {
