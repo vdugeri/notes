@@ -1,0 +1,287 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: #eee;
+  position: relative;
+}
+
+.logo {
+  flex: 0 0 20%;
+  margin-left: 2rem;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #00BCD4;
+  margin-right: 1rem;
+}
+
+.button {
+  margin-right: 2rem;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 1.4rem;
+  outline: 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .14);
+  transition: all .3s;
+}
+
+.btn:active {
+  box-shadow: none;
+  outline: 0;
+}
+
+.btn-full {
+  background-color: #00BCD4;
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  font-size: 1.8rem;
+  background-image: url('../images/notes.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  background-color: #00BCD4;
+  flex: 0 0 20%;
+  height: 90vh;
+}
+
+.searchbox {
+  margin-top: 4rem;
+}
+
+.search {
+  padding: 1.5rem 5rem;
+  border: 0;
+  outline: none;
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.14);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #777;
+}
+
+.search:active {
+  border-bottom: 3px solid green;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.notes li {
+  border-bottom: 2px solid #fff;
+  padding: 2rem;
+  color: #fff;
+  transition: box-shadow .3s;
+  margin-top: 1rem;
+  width: 20vw;
+  cursor: pointer;
+}
+
+.notes li:hover {
+  transform: scaleY(1.1);
+}
+
+.notes li:active {
+  transform: translateY(1.1);
+}
+
+.content {
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60vw;
+  width: 60vw;
+  box-shadow: 0 1rem 2rem rgba(0, 0 , 0, .14);
+  color: #777;
+  line-height: 1.6;
+  padding: 2rem;
+  font-size: 1.6rem;
+  justify-content: center;
+  position: relative;
+  display: none;
+}
+
+.note p {
+  margin-top: 2rem;
+  min-width: 100%;
+}
+
+
+.note__actions {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-10%, 0);
+  z-index: 9999;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, .14);
+  background-color: #eee;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.modal__header {
+  padding: 2rem;
+  background-color: #00BCD4;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.icon-small {
+  font-size: 1.8rem;
+}
+
+.modal__header h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-group {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  color: #777;
+  margin-top: .5rem;
+  margin-left: 2.5rem;
+  transition: all .3s;
+}
+
+.form-input--text {
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  outline: none;
+  border: 0;
+}
+
+.form-input--text:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.form-input--textarea {
+  padding: 3rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  outline: none;
+  border: 0;
+}
+
+.form-input--textarea:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.form-input--text:focus {
+  border-bottom: 2px solid #00BCD4;
+}
+
+.form-input--textarea:focus {
+  border-bottom: 2px solid #00BCD4;
+}
+
+.form-input--text:active .form-label--title {
+  opacity: 1;
+}
+
+.toast {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  padding: 1rem 4rem;
+  z-index: 9999;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .14);
+  border-radius: 3px;
+  display: none;
+}
+
+.toast--error {
+  background-color: #e84118;
+}
+
+.toast--success {
+  background-color: #44bd32;
+}
+
+.toast p {
+  font-size: 1.5rem;
+  color: #fff;
+}
