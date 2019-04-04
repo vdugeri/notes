@@ -41,17 +41,17 @@
           </p>
           <div class="note__actions">
             <svg class="icon" id="edit">
-              <use xlink:href="../src/assets/images/symbol-defs.svg#icon-pencil"></use>
+              <use xlink:href="../src/assets/images/symbol-defs.svg#icon-pencil" class="edit"></use>
             </svg>
             <svg class="icon" id="delete">
-              <use xlink:href="../src/assets/images/symbol-defs.svg#icon-bin"></use>
+              <use xlink:href="../src/assets/images/symbol-defs.svg#icon-bin" class="delete"></use>
             </svg>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal -->
+  <!-- Create Note Modal -->
   <div class="modal" id="modal">
     <div class="modal__header">
       <h3>New Note</h3>
@@ -67,6 +67,24 @@
     </div>
     <div class="form-group">
       <button class="btn btn-full" id="saveNote">Save</button>
+    </div>
+  </div>
+  <!-- Edit Note modal -->
+  <div class="modal" id="editModal">
+    <div class="modal__header">
+      <h3>Edit Note</h3>
+      <a id="closeEditModal" class="icon-small" href="#">&cross;</a>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-input--text" id="edit-title" placeholder="Note title" />
+      <label for="edit-title" class="form-label form-label--title">Note Title</label>
+    </div>
+    <div class="form-group">
+      <textarea type="text" class="form-input--textarea" id="edit-body" placeholder="Note Content"></textarea>
+      <label for="edit-body" class="form-label">Note Content</label>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-full" id="editNote">Save</button>
     </div>
   </div>
   <!-- Toast -->

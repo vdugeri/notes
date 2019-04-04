@@ -1,9 +1,21 @@
-let modal = document.getElementById('modal');
+let createModal = document.getElementById('modal');
+let editModal = document.getElementById('editModal');
 
-export let showModal = () => {
-  modal.style.display = 'block';
+export let showCreateModal = () => {
+  createModal.style.display = 'block';
 }
 
-export let hideModal = () => {
-  modal.style.display = 'none';
+export let hideCreateModal = () => {
+  createModal.style.display = 'none';
+}
+
+export let showEditModal = (e) => {
+  const editTitleField = document.getElementById('edit-title');
+  const editBodyField = document.getElementById('edit-body');
+
+  editModal.style.display = 'block';
+}
+
+export let hideEditModal = () => {
+  editModal.style.display = 'none';
 }

@@ -41,13 +41,6 @@ html, body {
   letter-spacing: 3px;
 }
 
-.icon {
-  height: 2rem;
-  width: 2rem;
-  fill: #00BCD4;
-  margin-right: 1rem;
-}
-
 .button {
   margin-right: 2rem;
 }
@@ -170,6 +163,27 @@ html, body {
   right: 5%;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Icons */
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #00BCD4;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.icon-small {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* CREATE NOTE MODAL */
 .modal {
   position: absolute;
   top: 10%;
@@ -191,22 +205,18 @@ html, body {
   justify-content: space-between;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-
-.icon-small {
-  font-size: 1.8rem;
-}
-
 .modal__header h3 {
   font-size: 2rem;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
 }
+
+
+
+/*==========================*/
+/* FORM                     */
+/*==========================*/
 
 .form-group {
   padding: 2rem;
@@ -261,6 +271,9 @@ a {
 .form-input--text:active .form-label--title {
   opacity: 1;
 }
+
+
+/* TOAST */
 
 .toast {
   position: absolute;
