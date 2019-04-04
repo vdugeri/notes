@@ -96,9 +96,12 @@ export let getNotes = () => {
  * List notes on the sidebar
  */
 export let listNotes = () => {
-  const notesContainer = document.getElementById('notes');
-  const notes = JSON.parse(localStorage.getItem('notes'));
+  const notes = getNotes();
+  showNotes(notes);
+}
 
+let showNotes = notes => {
+  const notesContainer = document.getElementById('notes');
   clearChildren(notesContainer);
 
   notes.forEach(note => {
@@ -108,4 +111,19 @@ export let listNotes = () => {
     item.innerText = note.title;
     notesContainer.appendChild(item);
   });
+}
+
+export let filterNotes = (event) => {
+  const filterTerm = event.target.value;
+  let notes = getNotes();
+
+  notes = notes.filter(note => {
+    return note.title.toLowerCase().includes(filterTerm.toLowerCase()) ||
+      note
+        .body
+        .toLowerCase()
+        .includes(filterTerm.toLowerCase())
+  });
+
+  showNotes(notes);
 }

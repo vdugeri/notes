@@ -1,6 +1,6 @@
 let modal = document.getElementById('modal');
 
-export let showModal = (e) => {
+export let showModal = () => {
   modal.style.display = 'block';
 }
 
