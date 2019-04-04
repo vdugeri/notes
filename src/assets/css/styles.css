@@ -151,7 +151,7 @@ html, body {
 }
 
 .note p {
-  margin-top: 2rem;
+  margin-top: 5rem;
   min-width: 100%;
 }
 
@@ -161,6 +161,8 @@ html, body {
   position: absolute;
   top: 5%;
   right: 5%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -183,19 +185,34 @@ a {
   cursor: pointer;
 }
 
-/* CREATE NOTE MODAL */
+
+
+/* MODAL */
 .modal {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-10%, 0);
-  z-index: 9999;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, .14);
-  background-color: #eee;
-  width: 50rem;
-  display: flex;
-  flex-direction: column;
   display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4)
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 .modal__header {
@@ -203,6 +220,17 @@ a {
   background-color: #00BCD4;
   display: flex;
   justify-content: space-between;
+}
+
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
 
 .modal__header h3 {
@@ -238,6 +266,7 @@ a {
   font-weight: 300;
   outline: none;
   border: 0;
+  background-color: #ccc;
 }
 
 .form-input--text:placeholder-shown + .form-label {
@@ -252,6 +281,7 @@ a {
   font-weight: 300;
   outline: none;
   border: 0;
+  background-color: #ccc;
 }
 
 .form-input--textarea:placeholder-shown + .form-label {
@@ -277,8 +307,8 @@ a {
 
 .toast {
   position: absolute;
-  top: 5%;
-  right: 15%;
+  top: 10%;
+  right: 2%;
   padding: 1rem 4rem;
   z-index: 9999;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .14);

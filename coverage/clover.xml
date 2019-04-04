@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554384882815" clover="3.2.0">
-  <project timestamp="1554384882815" name="All files">
+<coverage generated="1554386192556" clover="3.2.0">
+  <project timestamp="1554386192556" name="All files">
     <metrics statements="104" coveredstatements="96" conditionals="14" coveredconditionals="11" methods="28" coveredmethods="22" elements="146" coveredelements="129" complexity="0" loc="104" ncloc="104" packages="1" files="4" classes="4">
       <file name="modal.js" path="/Users/Verem/frontend-task/src/modal.js">
         <metrics statements="12" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
